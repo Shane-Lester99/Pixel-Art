@@ -27,9 +27,11 @@ inputBox.addEventListener('onchange', function updateBox() {
 /*document.addEventListener('click', function test() { alert("Hello world"); });
 */
 
-function paintBox() {
+function paintBox(event) {
 	//event.target.style.color = "red";
-  event.target.style = "background-color : red";
+  //event.target.style = "background-color : red";
+  const colorPicker = document.querySelector("#colorPicker");
+  event.target.style = `background-color : ${colorPicker.value}`;
 }
 
 //Submit Button
