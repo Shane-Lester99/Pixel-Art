@@ -29,7 +29,7 @@ inputBox.addEventListener('onchange', function updateBox() {
 
 function paintBox() {
 	//event.target.style.color = "red";
-  alert('activate paintBox');
+  event.target.style = "background-color : red";
 }
 
 //Submit Button
