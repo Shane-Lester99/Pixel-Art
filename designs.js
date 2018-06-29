@@ -27,9 +27,9 @@ inputBox.addEventListener('onchange', function updateBox() {
 /*document.addEventListener('click', function test() { alert("Hello world"); });
 */
 
-function paintColor() {
+function paintBox() {
 	//event.target.style.color = "red";
-  alert('activate paintColor');
+  alert('activate paintBox');
 }
 
 //Submit Button
@@ -60,7 +60,6 @@ function makeGrid(height, width) {
   */
   //alert(grid.outerHTML);
   
-  
   const grid = document.querySelector('#pixelCanvas');
   /*
   if (EMPTYGRID !== grid.outerHTML) {
@@ -71,13 +70,23 @@ function makeGrid(height, width) {
   grid.innerHTML = "";
   for (let i = 0; i < height; i++) {
     const newRow = 	document.createElement("TR");
-    
     for (let j = 0; j < width; j++) {
       newRow.insertCell(j);
      
     }   
     grid.appendChild(newRow);
   }
+
+  const allDataElements = document.querySelectorAll('td');
+
+  allDataElements.forEach( 
+  function(currentValue, currentIndex, listObj) { 
+    currentValue.addEventListener('click', paintBox);
+  }
+);
 }
+
+
+ 
 
 
