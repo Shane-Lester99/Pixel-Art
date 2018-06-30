@@ -1,92 +1,87 @@
-// Select color input
+/******************************************************************************
+Title:       designs.js
 
-// Select size input
-//const form = document.querySelector('form');
-/*
-form.addEventListener('change', function test() {
-  const curr = event.target;
-  alert(curr.value);
-  //curr.value = event.target.value;
-  /*alert(document.body.querySelector('input[name="height"]'.valye); */
-//});*/
+Author:      Shane Lester
 
+Created on:  June 29th 2018
 
-/*
-const inputBox = document.querySelectorAll('input[type="number"]');
+Description: To be used to add grid-building and coloring functionality to 
+             with 'Pixel Art Maker' project. Please refer to README.md file
+             for more information.
 
-inputBox.addEventListener('onchange', function updateBox() {
-	alert('box was changed'); 
-});
-*/
-//heightBox.value = 3;
-//inputBox[0].value = 5;
+******************************************************************/
 
-//alert(inputBox[0].value);
-
-// When size is submitted by the user, call makeGrid()
-/*document.addEventListener('click', function test() { alert("Hello world"); });
-*/
-
+//@Paramameters: <td> element passed from .makeGrid() method.
+//@Return: None.
+//@Preconditions: This method was called
+  //by the .makeGrid() function as an event listener for a <td> html
+  //element. Previous background-color of <td> is now arbritary.
+//@Postconditions: Box in grid is color specified by  color picker.
 function paintBox(event) {
-	//event.target.style.color = "red";
-  //event.target.style = "background-color : red";
+  //Choose the color picker element.
   const colorPicker = document.querySelector("#colorPicker");
+  //The background color will be chosen for the <td> element.
   event.target.style = `background-color : ${colorPicker.value}`;
+  //Return from function.
+  return;
 }
 
-//Submit Button
-document.querySelector('input[type="submit"]').addEventListener('click', function test(event) {
+//@Paramameters: Event object used only to prevent defaults to be able 
+  //to define behavior easier. 
+//@Return: None.
+//@Preconditions: This funciton is only meant to be called on an event listener. 
+  //It is meant to only be called for event when 'submit' button is pushed. 
+//@Postconditions: Grid is created for box of size specified by client.
+function createCanvas(event) {
+  //Prevent defaults to define behavior programmatically.
   event.preventDefault();
-  const boxes = document.querySelectorAll('input[type="number"');
-  heightOfGrid = boxes[0].value;
-  widthOfGrid = boxes[1].value;
-  makeGrid(heightOfGrid, widthOfGrid);
-  /*const height = document.querySelector('#inputHeight') {
-  //height.setAttribute('value') = 7;
-  alert(height);
-  }*/
-});
+  //Creates variable for height and width form elements in list where 
+    //height is at pos 0 and width is at pos 1.
+  const boxes = document.querySelectorAll('input[type="number"]');
+  //Pass in height and width to .makeGrid() method.
+  makeGrid(boxes[0].value, boxes[1].value);
+  //Return from function.
+  return;
+}
 
-
-
-function makeGrid(height, width) {
-  // Your code goes here!
-  /*
-  const grid = document.querySelector("#pixelCanvas");
-  const row = document.createElement("TR");
-  row.insertCell(0);
-  row.insertCell(1);
-  grid.appendChild(row);
-  
-  alert(grid.outerHTML);
-  */
-  //alert(grid.outerHTML);
-  
+//@Paramameters: Height and width of grid specified by client. 
+//@Return: None.
+//@Preconditions: This funciton is only meant to be called on an event listener. 
+  //It is meant to only be called for event when 'submit' button is pushed. 
+//@Postconditions: Grid is created for box of size specified by client.
+function makeGrid(height, width) { 
+  //Find element that is the table which will be used as grid.
   const grid = document.querySelector('#pixelCanvas');
-  /*
-  if (EMPTYGRID !== grid.outerHTML) {
-    alert("HIT1");
-    document.querySelector('#pixelCanvas').outerHTML = EMPTYGRID; 
-    alert("HIT2");   
-  }*/
+  //Delete the html within the grid so the new height and width can be used.
   grid.innerHTML = "";
+  //Create rows equal to height parameter.
   for (let i = 0; i < height; i++) {
-    const newRow = 	document.createElement("TR");
+    //Create the new row element.
+    const newRow =  document.createElement("TR");
+    //Create amount of cells specified by width parameter.
     for (let j = 0; j < width; j++) {
+      //Add new cells into table row object.
       newRow.insertCell(j);
-     
-    }   
+    }  
+    //Add new row into grid element on the DOM. 
     grid.appendChild(newRow);
   }
-
+  //Get NodeList of all newly created cells.
   const allDataElements = document.querySelectorAll('td');
-
-  allDataElements.forEach( 
-  function(currentValue, currentIndex, listObj) { 
+  //For each cell add the event listener .paintBox() so the boxes can be painted.
+  allDataElements.forEach(function(currentValue, currentIndex, listObj) { 
     currentValue.addEventListener('click', paintBox);
-  }
-);
+  });
+  //Return from funciton.
+  return;
 }
+
+//The event listener which creates all the grid functionality once the 'submit' button is clicked.
+document.querySelector('input[type="submit"]').addEventListener('click', createCanvas);
+
+
+
+
 
 
  

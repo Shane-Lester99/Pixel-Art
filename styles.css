@@ -1,3 +1,17 @@
+/**************************************************************************
+
+Title:       styles.css
+
+Author:      Udacity.com
+
+Description: css stylesheet to be used in 'Pixel Art Maker' project. The css was
+             created by Udacity.com in order to support my javascript educational
+             project. The html/css was very basic and was just a template
+             to better understand javascript. Please refer to the README.md
+             file for details on the 'Pixel Art Maker' project.
+
+*************************************************************************/
+
 body {
   text-align: center;
 }
