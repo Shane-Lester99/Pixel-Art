@@ -4,13 +4,13 @@ Created by Shane Lester and Udacity.com
 
 ## Table of Contents
 
-* [Description](#description)
-* [Purpose](#purpose)
-* [Contributions](#contributions)
-* [Browsers Supported](#browsers_supported)
-* [Usage](#usage)
-* [Build](#build)
-* [Modifications](#modifications)
+- [Description](#description)
+- [Purpose](#purpose)
+- [Contributions](#contributions)
+- [Browsers Supported](#browsers_supported)
+- [Usage](#usage)
+- [Build](#build)
+- [Modifications](#modifications)
 
 ## Description: 
 <p>This project is called 'Pixel Art Maker,'
