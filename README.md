@@ -1,4 +1,4 @@
-# *Pixel Art Maker Project*
+# *Pixel Art Maker!*
 
 Created by Shane Lester and Udacity.com
 
