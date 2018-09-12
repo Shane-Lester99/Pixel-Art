@@ -18,7 +18,10 @@ on a grid to make various shapes and pictures of any color.
 The grids height and width are specified by the use.
 
 ### Purpose:     
-To create cool fun pixel art in the browser
+To create a drawing app that is easy to use it the browser, fun, and addictive.
+It also is great for trying to draw old video game characters (which tended to
+be very pixelated). It can also be used by any artist who feels like playing around
+with pixel art.
 
 ### Contributions:
 
