@@ -1,8 +1,5 @@
 # *Pixel Art Maker!*
 
-Created by Shane Lester and Udacity.com
-
-
 ## Table of Contents
 
 - [Description](#description)
@@ -11,7 +8,8 @@ Created by Shane Lester and Udacity.com
 - [Browsers Supported](#browsers_supported)
 - [Usage](#usage)
 - [Build](#build)
-- [Modifications](#modifications)
+- [Possible Future Updates](#possible-future-updates)
+- [Created by](#created-by)
 
 ### Description: 
 This project is called 'Pixel Art Maker,'
@@ -55,3 +53,7 @@ height/ width form again and click submit. A blank grid of those dimensions will
 - Feature to save pictures and creating an account where you can save pictures and share them with others and star them, with a feed of popular ones
 
 - Optimize for touch devices (currently works but UX is slower)
+
+### Created by
+
+Created by Shane Lester and Udacity.com
