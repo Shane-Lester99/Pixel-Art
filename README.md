@@ -6,6 +6,7 @@
 - [Purpose](#purpose)
 - [Contributions](#contributions)
 - [Browsers Supported](#browsers_supported)
+- [How to open the game](#how-to-open-the-game)
 - [Usage](#usage)
 - [Build](#build)
 - [Possible Future Updates](#possible-future-updates)
@@ -40,6 +41,9 @@ with pixel art.
 
 - These were the browsers that this application was tested on but feel free to try others
 
+### How To Open the game
+
+- Playable online [here](https://shane-lester99.github.io/Pixel-Art-Maker/index.html)
 
 ### Usage:       
 First fill in the height and width form and then click submit. Next, begin to color the pixels on the grid with any color of clients choosing via the color-picker widget. If the client wishes to start over or use a different height/ width combination, fill out the 
