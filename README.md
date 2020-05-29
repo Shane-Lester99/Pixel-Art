@@ -1,3 +1,3 @@
 # *Pixel Art*
 
-Source code for browser based video game used [here](https://github.com/Shane-Lester99/Shane-Lester99.github.io).
+Source code for game to be played on the Game Zone video game platform. More information available [here](https://github.com/Shane-Lester99/Game-Zone).
